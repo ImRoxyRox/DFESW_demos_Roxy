@@ -4,18 +4,18 @@ public class Runner {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Person roxy = new Person("Roxy", "single", 49, "dark");
+		Person nico = new Person("Nico", "married", 43, "dark");
 		
-		Person lory = new Person("Lory", "widow", "blond");
+		Person javier = new Person("Javier", "married", "dark");
 				
-		System.out.println(roxy.name);
-		System.out.println(roxy.status);
-		System.out.println(roxy.age);
-		System.out.println(roxy.hairColour);
+		System.out.println(nico.name);
+		System.out.println(nico.status);
+		System.out.println(nico.age);
+		System.out.println(nico.hairColour);
 		System.out.println();
-		System.out.println(lory.name);
-		System.out.println(lory.status);
-		System.out.println(lory.hairColour);
+		System.out.println(javier.name);
+		System.out.println(javier.status);
+		System.out.println(javier.hairColour);
 	}
 
 }
