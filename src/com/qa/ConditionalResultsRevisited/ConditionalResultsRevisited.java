@@ -26,14 +26,19 @@ public class ConditionalResultsRevisited {
 
 	public void methodTwo() {
 		this.percentage = (total * 100) / 450;
-	
-
-		if (this.percentage < 60) {
-			System.out.println("Sorry you failed");
-
+		int physicst =  (this.physics * 100) / 150;
+		int chemistryt =  (this.chemistry * 100) / 150;
+		int biologyt =  (this.biology * 100) / 150;
+				
+		System.out.println("Percentage: " + this.percentage + "%");
+		
+		if (physicst >= 60 && chemistryt >= 60 && biologyt >= 60) {
+			System.out.println("WEll done, you passed!");
+			
 		} else {
-			System.out.println("Well done, you passed!");
+			System.out.println("Sorry you failed!");
 		}
+
 	}
 
 }
