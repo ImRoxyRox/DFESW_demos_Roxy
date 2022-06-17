@@ -1,4 +1,4 @@
-//so that there is now a pass mark of 60%; if the person receives under 60% they get a fail message.
+//the message that is displayed varies depending on the number of subjects that they have failed.
 package com.qa.ConditionalResultsRevisited;
 
 public class ConditionalResultsRevisited {
@@ -26,17 +26,29 @@ public class ConditionalResultsRevisited {
 
 	public void methodTwo() {
 		this.percentage = (total * 100) / 450;
-		int physicst =  (this.physics * 100) / 150;
-		int chemistryt =  (this.chemistry * 100) / 150;
-		int biologyt =  (this.biology * 100) / 150;
 				
 		System.out.println("Percentage: " + this.percentage + "%");
 		
-		if (physicst >= 60 && chemistryt >= 60 && biologyt >= 60) {
-			System.out.println("WEll done, you passed!");
+		if (physics < 90 && chemistry < 90 && biology < 90) {
+			System.out.println("Sorry, you failed 3 subjects!");
+			
+		} else if (physics > 90 && chemistry < 90 && biology < 90) {
+			System.out.println("Sorry you failed 2 subjects!");
+			
+		} else if (physics < 90 && chemistry < 90 && biology > 90) {
+			System.out.println("Sorry you failed 2 subjects!");
+
+		} else if (physics > 90 && chemistry > 90 && biology < 90) {
+			System.out.println("Sorry you failed 1 subjects!");
+			
+		} else if (physics < 90 && chemistry > 90 && biology > 90) {
+			System.out.println("Sorry you failed 1 subjects!");
+			
+		} else if (physics > 90 && chemistry < 90 && biology > 90) {
+			System.out.println("Sorry you failed 1 subjects!");
 			
 		} else {
-			System.out.println("Sorry you failed!");
+			System.out.println("Well done, you passed!");
 		}
 
 	}
